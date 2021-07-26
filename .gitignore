@@ -24,8 +24,7 @@ hs_err_pid*
 
 lib/
 build/
-pc1d/
-dist/
+
 help/Day10_review_of_vipassana.txt
 help/FLVPlayer_Progressive.swf
 
@@ -39,3 +38,7 @@ help/AcidicTexturing_files/oledata.mso
 help/AcidicTexturing_files/props0022.xml
 help/AcidicTexturing_files/image012.emz
 help/HelpMenu_files/themedata.thmx
+
+InstallerFullAndDemo.nsi
+/Dockerfile
+/supervisord.conf
