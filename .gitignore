@@ -21,3 +21,21 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+lib/
+build/
+pc1d/
+dist/
+help/Day10_review_of_vipassana.txt
+help/FLVPlayer_Progressive.swf
+
+Thumbs.db
+
+help/Scripts/AC_RunActiveContent.js
+help/AcidicTexturing_files/themedata.thmx
+help/AcidicTexturing_files/item0021.xml
+help/AcidicTexturing_files/ocxstg001.mso
+help/AcidicTexturing_files/oledata.mso
+help/AcidicTexturing_files/props0022.xml
+help/AcidicTexturing_files/image012.emz
+help/HelpMenu_files/themedata.thmx
