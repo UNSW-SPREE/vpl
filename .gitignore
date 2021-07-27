@@ -40,5 +40,4 @@ help/AcidicTexturing_files/image012.emz
 help/HelpMenu_files/themedata.thmx
 
 InstallerFullAndDemo.nsi
-/Dockerfile
-/supervisord.conf
+

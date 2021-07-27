@@ -24,7 +24,10 @@
 	"extensions": [
 		"vscjava.vscode-java-pack"
 	],
-	"mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
+	"mounts": [ 
+		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+		"source=vpl-bashhistory,target=/commandhistory,type=volume"
+	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
