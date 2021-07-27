@@ -15,13 +15,10 @@ WORKDIR /root/prefix32/drive_c/ProgramData/VirtualProductionLine
 
 COPY pc1d/Pc1d.exe pc1d/Pc1d.opt pc1d/
 
-COPY dist/ .
+COPY dist/ config.dat acidtexturing.dat README.txt .
 COPY help/ help/
 COPY icons/ icons/
 COPY images/ images/
-COPY config.dat .
-copy acidtexturing.dat .
-copy README.txt .
 
 ENV WINEDLLOVERRIDES="mscoree,mshtml="
 
