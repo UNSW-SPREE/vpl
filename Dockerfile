@@ -1,3 +1,4 @@
+#Adapted from https://github.com/solarkennedy/wine-x11-novnc-docker
 FROM ubuntu:focal
 
 ENV HOME /root
