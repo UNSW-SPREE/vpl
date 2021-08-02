@@ -1,0 +1,16 @@
+{
+    "configurations": [
+
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "vpl.VirtualProductionLine",
+            "args": "",
+            "projectName": "vpl-app"
+        }
+    ]
+}
