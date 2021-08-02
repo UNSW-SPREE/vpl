@@ -17,7 +17,7 @@ RUN apt-get update \
 
 # [Option] Install Maven
 ARG INSTALL_MAVEN="false"
-ARG MAVEN_VERSION=""
+ARG MAVEN_VERSION="3.6.3"
 # [Option] Install Gradle
 ARG INSTALL_GRADLE="false"
 ARG GRADLE_VERSION=""
