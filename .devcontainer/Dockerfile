@@ -29,8 +29,6 @@ ARG INSTALL_NODE="true"
 ARG NODE_VERSION="lts/*"
 RUN if [ "${INSTALL_NODE}" = "true" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
 
-ENV DISPLAY :99
-ENV RESOLUTION 1366x768x24
 
 RUN wget https://builds.openlogic.com/downloadJDK/openlogic-openjdk-jre/8u262-b10/openlogic-openjdk-jre-8u262-b10-windows-x32.zip
 RUN unzip openlogic-openjdk-jre-8u262-b10-windows-x32.zip
