@@ -16,6 +16,8 @@
       <groupId>org.jitsi</groupId>
       <artifactId>fmj</artifactId>
       <version>1.0.2-jitsi</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/customlib/fmj-1.0.2-jitsi.jar</systemPath>
     </dependency>
 
     <dependency>
@@ -30,20 +32,7 @@
     
     <plugins>
    
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.1.2</version>
-        <configuration>
-            <archive>
-                <manifestEntries>
-                    <addClasspath>true</addClasspath>
-                    <Main-Class>vpl.VirtualProductionLine</Main-Class>
-                </manifestEntries>
-            </archive>
-            <!-- <finalName>vpl</finalName> -->
-        </configuration>
-    </plugin>
+     
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>

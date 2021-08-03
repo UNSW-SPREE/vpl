@@ -9,54 +9,24 @@
 	</parent>
 
 	<artifactId>vpl-package</artifactId>
-	<packaging>jar</packaging>
+	<packaging>jlink</packaging>
 
 	<build>
 		<plugins>
 			
 			<plugin>
-                <groupId>org.digitalmediaserver</groupId>
-                <artifactId>nsis-maven-plugin</artifactId>
-                <version>1.0.3</version>
-                <configuration>
-                    <makensisExecutable>${project.external-resources}/third-party/nsis/Bin/makensis.exe</makensisExecutable>
-                    <makensisExecutableLinux>${project.external-resources}/third-party/nsis/Bin/makensisLinux</makensisExecutableLinux>
-                    <makensisExecutableMacOS>${project.external-resources}/third-party/nsis/Bin/makensisMacOS</makensisExecutableMacOS>
-                    <compression>lzma</compression>
-                    <compressionIsFinal>true</compressionIsFinal>
-                    <compressionDictSize>64</compressionDictSize>
-                    <defines>
-                        <PROJECT_NAME_SHORT>${project.name.short}</PROJECT_NAME_SHORT>
-                        <PROJECT_NAME_CAMEL>${project.name.camel}</PROJECT_NAME_CAMEL>
-                    </defines>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>build-windows-launcher</id>
-                        <configuration>
-                            <scriptFile>${project.basedir}/resources/nsis/InstallerFullAndDemo.nsi</scriptFile>
-                            <outputFile>${project.name.short}.exe</outputFile>
-                            <attachArtifact>false</attachArtifact>
-                        </configuration>
-                        <goals>
-                            <goal>generate-headerfile</goal>
-                            <goal>make</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>build-windows-installer</id>
-                        <configuration>
-                            <scriptFile>${project.external-resources}/nsis/setup.nsi</scriptFile>
-                            <outputFile>${project.name.short}-setup.exe</outputFile>
-                        </configuration>
-                        <goals>
-                            <goal>make</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+				<artifactId>maven-jlink-plugin</artifactId>
+				<version>3.0.0</version>
+				<extensions>true</extensions>
+				<configuration>
+					<sourceJdkModules>${project.build.directory}/${jdk.folder}</sourceJdkModules>
+                    <launcher>helloworldapp=app/com.mycompany.app.App</launcher>
+				</configuration>
+			</plugin>
 			
 		</plugins>
+			
+		
 	</build>
 
 	<dependencies>
