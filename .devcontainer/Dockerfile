@@ -2,6 +2,7 @@
 
 # [Choice] Java version: 11, 16
 ARG VARIANT="16"
+ENV NSIS 3.04-1
 FROM mcr.microsoft.com/vscode/devcontainers/java:0-${VARIANT}
 
 RUN apt-get update \
@@ -9,7 +10,7 @@ RUN apt-get update \
     && curl -fsSL https://download.docker.com/linux/$(lsb_release -is | tr '[:upper:]' '[:lower:]')/gpg | apt-key add - 2>/dev/null \
     && echo "deb [arch=amd64] https://download.docker.com/linux/$(lsb_release -is | tr '[:upper:]' '[:lower:]') $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list \
     && apt-get update \
-    && apt-get install -y docker-ce-cli unzip xfce4-terminal xvfb x11vnc xfce4 xrdp wine winbind  
+    && apt-get install -y docker-ce-cli unzip wine winbind nsis=${NSIS}
 
 # RUN dpkg --add-architecture i386 \
 #     && apt update \

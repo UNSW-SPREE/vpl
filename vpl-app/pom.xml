@@ -11,23 +11,25 @@
   <artifactId>vpl-app</artifactId>
 
   <dependencies>
+
+    <dependency>
+      <groupId>org.jitsi</groupId>
+      <artifactId>fmj</artifactId>
+      <version>1.0.2-jitsi</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-			<groupId>javax.media</groupId>
-			<artifactId>jmf</artifactId>
-			<version>2.1.1e</version>
-		</dependency>
   </dependencies>
   
   <build>
     
     <plugins>
-    
+   
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
@@ -39,7 +41,7 @@
                     <Main-Class>vpl.VirtualProductionLine</Main-Class>
                 </manifestEntries>
             </archive>
-            <finalName>vpl</finalName>
+            <!-- <finalName>vpl</finalName> -->
         </configuration>
     </plugin>
       <plugin>
