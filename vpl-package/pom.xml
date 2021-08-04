@@ -9,20 +9,57 @@
 	</parent>
 
 	<artifactId>vpl-package</artifactId>
-	<packaging>jlink</packaging>
+	<packaging>pom</packaging>
+
+    <properties>
+		<jdk.version>16</jdk.version>
+		<maven.compiler.source>16</maven.compiler.source>
+		<maven.compiler.target>16</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
 	<build>
 		<plugins>
 			
 			<plugin>
-				<artifactId>maven-jlink-plugin</artifactId>
-				<version>3.0.0</version>
-				<extensions>true</extensions>
-				<configuration>
-					<sourceJdkModules>${project.build.directory}/${jdk.folder}</sourceJdkModules>
-                    <launcher>helloworldapp=app/com.mycompany.app.App</launcher>
-				</configuration>
-			</plugin>
+                <groupId>com.googlecode.maven-download-plugin</groupId>
+                <artifactId>download-maven-plugin</artifactId>
+                <version>1.3.0</version>
+                <executions>
+                <execution>
+                    <id>download-1</id>
+                    <phase>generate-sources</phase>
+                    <goals>
+                    <goal>wget</goal>
+                    </goals>
+                    <configuration>
+                    <url>https://download.java.net/java/GA/jdk16.0.2/d4a915d82b4c4fbb9bde534da945d746/7/GPL/openjdk-16.0.2_windows-x64_bin.zip</url>
+                    <unpack>true</unpack>
+                    <outputDirectory>${directory.unzip}</outputDirectory>
+                    </configuration>
+                </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                <execution>
+                    <id>copy-dependencies</id>
+                    <phase>package</phase>
+                    <goals>
+                    <goal>copy-dependencies</goal>
+                    </goals>
+                    <configuration>
+                    <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                    <overWriteReleases>false</overWriteReleases>
+                    <overWriteSnapshots>false</overWriteSnapshots>
+                    <overWriteIfNewer>true</overWriteIfNewer>
+                    </configuration>
+                </execution>
+                </executions>
+            </plugin>
 			
 		</plugins>
 			

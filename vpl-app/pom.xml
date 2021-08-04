@@ -9,6 +9,13 @@
 	</parent>
 
   <artifactId>vpl-app</artifactId>
+  
+  <properties>
+		<jdk.version>16</jdk.version>
+		<maven.compiler.source>16</maven.compiler.source>
+		<maven.compiler.target>16</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
   <dependencies>
 
@@ -16,8 +23,6 @@
       <groupId>org.jitsi</groupId>
       <artifactId>fmj</artifactId>
       <version>1.0.2-jitsi</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/customlib/fmj-1.0.2-jitsi.jar</systemPath>
     </dependency>
 
     <dependency>
@@ -32,7 +37,7 @@
     
     <plugins>
    
-     
+      
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
