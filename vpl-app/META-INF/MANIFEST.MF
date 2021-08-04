@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Created-By: Apache Maven 3.6.3
-Built-By: root
-Build-Jdk: 16.0.2
-Class-Path: lib/fmj-1.0.2-jitsi.jar
-Main-Class: vpl.VirtualProductionLine
-
