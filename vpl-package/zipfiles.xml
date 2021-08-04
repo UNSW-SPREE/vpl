@@ -1,0 +1,12 @@
+<assembly>
+<id>bin</id>
+<formats>
+  <format>zip</format>
+</formats>
+<fileSets>
+  <fileSet>
+    <directory>target</directory>
+  </fileSet>
+  
+</fileSets>
+</assembly>

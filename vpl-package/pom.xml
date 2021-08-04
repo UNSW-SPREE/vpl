@@ -33,7 +33,7 @@
                     <goal>wget</goal>
                     </goals>
                     <configuration>
-                    <url>https://download.java.net/java/GA/jdk16.0.2/d4a915d82b4c4fbb9bde534da945d746/7/GPL/openjdk-16.0.2_windows-x64_bin.zip</url>
+                    <url>https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk-16.0.1%2B9/OpenJDK16U-jre_x86-32_windows_hotspot_16.0.1_9.zip</url>
                     <unpack>true</unpack>
                     <outputDirectory>${directory.unzip}</outputDirectory>
                     </configuration>
@@ -47,12 +47,12 @@
                 <executions>
                 <execution>
                     <id>copy-dependencies</id>
-                    <phase>package</phase>
+                    <phase>generate-sources</phase>
                     <goals>
                     <goal>copy-dependencies</goal>
                     </goals>
                     <configuration>
-                    <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                    <outputDirectory>${project.build.directory}</outputDirectory>
                     <overWriteReleases>false</overWriteReleases>
                     <overWriteSnapshots>false</overWriteSnapshots>
                     <overWriteIfNewer>true</overWriteIfNewer>
@@ -60,6 +60,22 @@
                 </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptor>zipfiles.xml</descriptor>
+                    <finalName>vpl-package-${pom.version}</finalName>
+                </configuration>
+                <executions>
+                    <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>single</goal>
+                    </goals>
+                    </execution>
+                </executions>
+                </plugin>
 			
 		</plugins>
 			
