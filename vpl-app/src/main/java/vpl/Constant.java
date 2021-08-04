@@ -19,11 +19,12 @@ public class Constant {
             String urlPrefix = "file:" + System.getProperty("user.dir")
             + System.getProperty("file.separator");
             String filename = "config.dat";
-            try {
-                document = new ConstantDocument((new URL(urlPrefix + filename)).getFile());
-            } catch (MalformedURLException ex) {
-                Logger.getLogger(Constant.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            // try {
+                
+                document = new ConstantDocument(Constant.class.getClassLoader().getResource(filename));
+            // } catch (MalformedURLException ex) {
+            //     Logger.getLogger(Constant.class.getName()).log(Level.SEVERE, null, ex);
+            // }
             ConstantInstanceNumber++;
         }
     }

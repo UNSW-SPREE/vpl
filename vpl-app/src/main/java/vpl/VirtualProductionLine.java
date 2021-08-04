@@ -337,10 +337,10 @@ public class VirtualProductionLine extends javax.swing.JFrame
         picturePanel.setBorder(BorderFactory.createBevelBorder(0));
         picturePane = new JScrollPane();
         picturePane.setBorder(BorderFactory.createBevelBorder(1));
-        String picString = "images" + System.getProperty("file.separator") + "VPL4_Intro.jpg";
-        coolpic = new PicPanel(classLoader.getResource(picString));
-        coolpic.validate();
-        picturePane.getViewport().add(coolpic);
+        // String picString = "images" + System.getProperty("file.separator") + "VPL4_Intro.jpg";
+        // coolpic = new PicPanel(classLoader.getResource(picString));
+        // coolpic.validate();
+        // picturePane.getViewport().add(coolpic);
         Dimension picturePaneSize = new Dimension(300,230);
 	picturePane.setPreferredSize(picturePaneSize);
         picturePane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);

@@ -7,6 +7,8 @@ import java.lang.Math.*;
 import java.text.NumberFormat;
 import java.awt.geom.*;
 import java.lang.reflect.InvocationTargetException;
+import java.net.URL;
+import java.nio.file.Files;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -438,19 +440,23 @@ class Wafer implements Serializable{
         graphTimes = new Vector();
         graphStages = new Vector();
         
-         try {
-            pc1dFolder = WinRegistry.readString(WinRegistry.HKEY_LOCAL_MACHINE, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders", "Common AppData");
-        } catch (IllegalArgumentException ex) {
-            Logger.getLogger(Wafer.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            Logger.getLogger(Wafer.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InvocationTargetException ex) {
-            Logger.getLogger(Wafer.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        //  try {
+           
+            // pc1dFolder = WinRegistry.readString(WinRegistry.HKEY_CURRENT_USER, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders", "Common AppData");
+        pc1dFolder = "/pc1d"; //This is the path inside the resources folder but unlikely it will work
+        // } catch (IllegalArgumentException ex) {
+        //     Logger.getLogger(Wafer.class.getName()).log(Level.SEVERE, null, ex);
+        // } catch (IllegalAccessException ex) {
+        //     Logger.getLogger(Wafer.class.getName()).log(Level.SEVERE, null, ex);
+        // } catch (InvocationTargetException ex) {
+        //     Logger.getLogger(Wafer.class.getName()).log(Level.SEVERE, null, ex);
+        // }
         
   
         return this;
     }
+    
+    
 
     public String runTest(String testName, int currentBatchStage){
         NumberFormat format = NumberFormat.getNumberInstance();

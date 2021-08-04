@@ -7,18 +7,20 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import java.io.File;
+import java.net.URI;
+import java.net.URL;
 
 /**
  *
  * @author Quanzhou Yu
  */
 public class ConstantDocument {
-    String filePath;
+    // String filePath;
     Document document;
-    public ConstantDocument(String path){
-        filePath = path;
+    public ConstantDocument(URL url){
+        // filePath = path;
         try{
-            File fXmlFile = new File(path);
+            File fXmlFile = new File(url.toURI());
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             document = dBuilder.parse(fXmlFile);
