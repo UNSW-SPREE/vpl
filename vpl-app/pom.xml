@@ -64,11 +64,13 @@
                     <goals>
                         <goal>shade</goal>
                     </goals>
+                    <configuration>
+                      <shadedClassifierName>shaded</shadedClassifierName>
+                      <shadedArtifactAttached>true</shadedArtifactAttached>
+                    </configuration>
                 </execution>
             </executions>
-            <configuration>
-                <finalName>uber-${project.artifactId}-${project.version}</finalName>
-            </configuration>
+            
         </plugin>
       
       <!-- <plugin>

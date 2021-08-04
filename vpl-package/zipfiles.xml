@@ -5,7 +5,8 @@
 </formats>
 <fileSets>
   <fileSet>
-    <directory>target</directory>
+    <directory>target/zip</directory>
+    <outputDirectory></outputDirectory>
   </fileSet>
   
 </fileSets>
