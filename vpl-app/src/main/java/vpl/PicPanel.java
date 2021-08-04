@@ -9,14 +9,16 @@ package vpl;
  */
 import java.awt.*;
 import java.awt.event.*;
+import java.net.URL;
+
 import javax.swing.*;
 
 public class PicPanel extends JPanel{
     ImageIcon pic;
     Image image;
 
-    public PicPanel(String urlString){
-        pic = new ImageIcon(urlString);
+    public PicPanel(URL location){
+        pic = new ImageIcon(location);
         repaint();
     }
 

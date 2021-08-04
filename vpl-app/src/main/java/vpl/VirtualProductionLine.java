@@ -25,8 +25,7 @@ public class VirtualProductionLine extends javax.swing.JFrame
 //**********OBJECTS**********
     public String urlPrefix = "file:" + System.getProperty("user.dir")
         + System.getProperty("file.separator");
-    public String directoryPrefix = System.getProperty("user.dir")
-        + System.getProperty("file.separator");
+    public String directoryPrefix = "";
     public String userPrefix = System.getProperty("user.home") 
 	+ System.getProperty("file.separator");
 
@@ -338,8 +337,8 @@ public class VirtualProductionLine extends javax.swing.JFrame
         picturePanel.setBorder(BorderFactory.createBevelBorder(0));
         picturePane = new JScrollPane();
         picturePane.setBorder(BorderFactory.createBevelBorder(1));
-        String picString = "images" + System.getProperty("file.separator") + "VPL4_Intro.jpg"; test
-        coolpic = new PicPanel(classLoader.getResource("images/VPL4_Intro.jpg").toString());
+        String picString = "images" + System.getProperty("file.separator") + "VPL4_Intro.jpg";
+        coolpic = new PicPanel(classLoader.getResource(picString));
         coolpic.validate();
         picturePane.getViewport().add(coolpic);
         Dimension picturePaneSize = new Dimension(300,230);
@@ -2176,7 +2175,8 @@ public class VirtualProductionLine extends javax.swing.JFrame
                 legendPanel.setVisible(true);
                 legendPanel.validate();
                 String fn = directoryPrefix + "images" + System.getProperty("file.separator") + filename;
-                PicPanel myPic = new PicPanel(fn);
+                ClassLoader classLoader = getClass().getClassLoader();
+                PicPanel myPic = new PicPanel(classLoader.getResource(fn));
                 myPic.validate();
                 picturePane.getViewport().add(myPic);
                 this.getContentPane().doLayout();
@@ -2300,7 +2300,7 @@ public class VirtualProductionLine extends javax.swing.JFrame
 	        case 34:
 	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "cofpic.jpg"; break;
 	        }
-	        PicPanel myPic = new PicPanel(fn);
+	        PicPanel myPic = new PicPanel(classLoader.getResource(fn));
 	        myPic.validate();
 	        picturePane.getViewport().add(myPic);
 	        this.getContentPane().doLayout();
