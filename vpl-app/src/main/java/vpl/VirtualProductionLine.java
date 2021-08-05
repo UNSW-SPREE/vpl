@@ -2228,14 +2228,14 @@ public class VirtualProductionLine extends javax.swing.JFrame
         if (batches.size() > 0){
         int batchStatus = ((Batch)batches.elementAt(cbIndex)).batchStatus;
         ClassLoader classLoader = getClass().getClassLoader();
-    	String fn = classLoader.getResource("images/VPL4_Intro.jpg").toString();
+    	String fn = directoryPrefix + "images/VPL4_Intro.jpg";
         switch(batchStatus){
         	case -2:
-       	 	fn = classLoader.getResource("images/VPL4_Intro.jpg").toString(); break;
+       	 	fn = directoryPrefix + "images/VPL4_Intro.jpg"; break;
 	        case -1:
-	       	 	fn = classLoader.getResource("images/VPL4_Intro.jpg").toString(); break;
+	       	 	fn = directoryPrefix + "images/VPL4_Intro.jpg"; break;
 	        case 0:
-	        	 fn = classLoader.getResource("images/VPL4_Intro.jpg").toString(); break;
+	        	 fn = directoryPrefix + "images/VPL4_Intro.jpg"; break;
 	        case 1:
 	        	fn = directoryPrefix + "images/epic.JPG"; break;
 	        case 2:
@@ -2267,7 +2267,7 @@ public class VirtualProductionLine extends javax.swing.JFrame
 	        case 15:
 	        	fn = directoryPrefix + "images/ssfpic.JPG"; break;
 	        case 16:
-	        	fn = classLoader.getResource("images/VPL4_Intro.jpg").toString(); break;
+	        	fn = directoryPrefix + "images/VPL4_Intro.jpg"; break;
 
                  // add image on acid texture BobH
 

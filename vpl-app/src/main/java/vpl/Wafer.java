@@ -441,17 +441,12 @@ class Wafer implements Serializable{
         graphTimes = new Vector();
         graphStages = new Vector();
         
-        //  try {
+        var pc1dFolderEnv = System.getenv("PC1D_FOLDER");
+        var pc1dExeEnv = System.getenv("PC1D_EXE");
         var jarPath = new File("").getAbsolutePath();
-        pc1dFolder = jarPath + System.getProperty("file.separator") + "pc1d";
-        pc1dExe = pc1dFolder + System.getProperty("file.separator") + "Pc1d.exe"; //This is the path inside the resources folder but unlikely it will work
-        // } catch (IllegalArgumentException ex) {
-        //     Logger.getLogger(Wafer.class.getName()).log(Level.SEVERE, null, ex);
-        // } catch (IllegalAccessException ex) {
-        //     Logger.getLogger(Wafer.class.getName()).log(Level.SEVERE, null, ex);
-        // } catch (InvocationTargetException ex) {
-        //     Logger.getLogger(Wafer.class.getName()).log(Level.SEVERE, null, ex);
-        // }
+        pc1dFolder = (pc1dFolderEnv != null) ? pc1dFolderEnv : jarPath + System.getProperty("file.separator") + "pc1d";
+        pc1dExe = (pc1dExeEnv != null) ? pc1dExeEnv : pc1dFolder + System.getProperty("file.separator") + "Pc1d.exe"; //This is the path inside the resources folder but unlikely it will work
+        
         
   
         return this;
@@ -915,7 +910,7 @@ class Wafer implements Serializable{
         try {
             //run pc1dRuntime.getRuntime().exec
             Process p = Runtime.getRuntime().exec(commandString,null,
-                    new File(pc1dExe));
+                    new File(pc1dFolder));
             p.waitFor();
         } catch (IOException e) {
             System.out.println( "An IO exception occurred while executing the cmd <" + commandString + ">:" + e.getMessage() );

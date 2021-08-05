@@ -65,7 +65,7 @@ Basically once you have XQuartz installed and change the settings to allow netwo
 - Yang Li
 - Quanzhou Yu
 
-Conversion to open source with thanks from Bram Hoex (UNSW), Richard Corkish (ACAP) and Ben Sudbury (PV Lighthouse)
+Conversion to open source, docker deployment and modern build process with thanks from Bram Hoex (UNSW), Richard Corkish (ACAP) and Ben Sudbury (PV Lighthouse)
 
 
 

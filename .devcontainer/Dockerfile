@@ -44,3 +44,5 @@ RUN unzip openlogic-openjdk-jre-8u262-b10-windows-x32.zip
 #console history
 RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/.bash_history" \
     && echo $SNIPPET >> "/root/.bashrc"
+
+ENV PC1D_FOLDER="/workspaces/vpl/vpl-app/pc1d" PC1D_EXE="/usr/bin/wine /workspaces/vpl/vpl-app/pc1d/Pc1d.exe"
