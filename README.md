@@ -1,8 +1,12 @@
 # Virtual Production Line
 
+This application was written a long time ago and while best efforts have been made to get a working version some things inevitably won't work. For example, while the help html files are in this repository and are bundled with the application, they do not work due to dependencies on technologies that are no longer available. 
+
+The instructions below are enough to build and run the application, so if you want to make some upgrades to the parts of the application that are no longer working, your contribuitions would be welcome. Just clone this repository, make your changes and make a pull request to request your changes to be integrated back into the main project for the benefit of all users of the Virtual Production Line.
+
 ## Installing and Running the VPL
 
-### docker (Any Platform)
+### docker (Any Platform) - recommended
 ---
 
 First install docker for your platform - https://docs.docker.com/get-docker/
@@ -13,12 +17,21 @@ Then run the following command to start the application using docker:
 
 Point your browser to http://localhost:8080
 
+### Windows
+---
+If you build the application acording to the instructions below, you will find that a zip file package is generated at vpl-package-windows/target/vpl-package-1.0-SNAPSHOT-bin.zip
+
+The vpl can be run by extracting this zip file to a folder and running vpl.bat inside the extracted folder.
+
+NOTE: the Virtual Production Line currently depends upon an old 16 bit x86 version of PC1D. Modern versions of Windows come in a variety of flavours and 64 bit windows does not natively support 16 bit applications. There are workarounds for these issues but they are beyond the sope of this readme.
+
+
 ## Building
 
 ### on a windows machine
 ---
 
-1. Install Java SDK
+1. Install Java 16 SDK
 2. Install Maven
 3. Run `mvn clean package` to build the deployment package
 
