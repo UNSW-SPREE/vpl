@@ -442,9 +442,9 @@ class Wafer implements Serializable{
         graphStages = new Vector();
         
         //  try {
-           
-        pc1dFolder = "pc1d";
-        pc1dExe = "/usr/bin/wine " + pc1dFolder + System.getProperty("file.separator") + "Pc1d.exe"; //This is the path inside the resources folder but unlikely it will work
+        var jarPath = new File("").getAbsolutePath();
+        pc1dFolder = jarPath + System.getProperty("file.separator") + "pc1d";
+        pc1dExe = pc1dFolder + System.getProperty("file.separator") + "Pc1d.exe"; //This is the path inside the resources folder but unlikely it will work
         // } catch (IllegalArgumentException ex) {
         //     Logger.getLogger(Wafer.class.getName()).log(Level.SEVERE, null, ex);
         // } catch (IllegalAccessException ex) {
@@ -2207,7 +2207,7 @@ class Wafer implements Serializable{
             //run pc1d
             Process p = Runtime.getRuntime().exec(commandString,
                     null,
-                    new File(pc1dExe));
+                    new File(pc1dFolder));
             p.waitFor();
         } catch (IOException e) {
             System.out.println( "An IO exception occurred while executing the cmd <" + commandString + ">:" + e.getMessage() );
