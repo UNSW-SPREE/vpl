@@ -55,6 +55,13 @@ Docker has no gui so if you want to run the application inside the container you
 
 Basically once you have XQuartz installed and change the settings to allow network connections, all you need to do is run xhost + 127.0.0.1 on your Mac prior to debugging
 
+## Possible improvements
+
+- Fix up the help files so they work inside the app - html files are all in this repository
+- Make an installation package that works on Windows
+    - Work out a way to run the 16 bit version of pc1d work (https://github.com/otya128/winevdm - doesn't seem to work) /or
+    - upgrade the factory to use cmd- pc1d (https://www2.pvlighthouse.com.au/resources/PC1D/PC1Dmod6/PC1Dmod6.aspx)
+
 ## Contributors
 
 - Stuart Wenham
