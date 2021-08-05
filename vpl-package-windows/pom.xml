@@ -44,7 +44,7 @@
                             <classifier>shaded</classifier>
                         </artifactItem>
                     </artifactItems>
-                    <outputDirectory>target/zip</outputDirectory>
+                    <outputDirectory>target/zip/lib</outputDirectory>
                     </configuration>
                 </execution>
                 </executions>
@@ -61,10 +61,10 @@
                     <goal>copy-resources</goal>
                     </goals>
                     <configuration>
-                    <outputDirectory>${basedir}/target/zip/pc1d</outputDirectory>
+                    <outputDirectory>${basedir}/target/zip</outputDirectory>
                     <resources>
                         <resource>
-                            <directory>pc1d</directory>
+                            <directory>resources</directory>
                             <filtering>true</filtering>
                         </resource>
                     </resources>
@@ -73,6 +73,7 @@
                 </executions>
             </plugin>
 
+            
             <plugin>
                 <groupId>com.googlecode.maven-download-plugin</groupId>
                 <artifactId>download-maven-plugin</artifactId>

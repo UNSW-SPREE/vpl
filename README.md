@@ -1,6 +1,10 @@
 # Virtual Production Line
 
-This application was written a long time ago and while best efforts have been made to get a working version some things inevitably won't work. For example, while the help html files are in this repository and are bundled with the application, they do not work due to dependencies on technologies that are no longer available. 
+Simulated production line for screen printed solar cells, Originally Published: 2002
+
+Released as open source 2021.
+
+This application was written almost 20 years ago and while best efforts have been made to get a working version some things inevitably won't work. For example, while the help html files are in this repository and are bundled with the application, they do not work due to dependencies on technologies that can't be made open source or are simply no longer available.
 
 The instructions below are enough to build and run the application, so if you want to make some upgrades to the parts of the application that are no longer working, your contribuitions would be welcome. Just clone this repository, make your changes and make a pull request to request your changes to be integrated back into the main project for the benefit of all users of the Virtual Production Line.
 
@@ -8,6 +12,8 @@ The instructions below are enough to build and run the application, so if you wa
 
 ### docker (Any Platform) - recommended
 ---
+
+The docker version of this software has the advantage that it can run on any operating system or architecture that supports docker. This also means that it could be deployed as a hosted solution.
 
 First install docker for your platform - https://docs.docker.com/get-docker/
 
@@ -48,5 +54,18 @@ Developing inside docker containers ensures that all the dependencies required t
 Docker has no gui so if you want to run the application inside the container you need to forward the x11 port to your local machine and run a local x11 server that will do the display. Instructions for Mac are available at: https://medium.com/@mreichelt/how-to-show-x11-windows-within-docker-on-mac-50759f4b65cb
 
 Basically once you have XQuartz installed and change the settings to allow network connections, all you need to do is run xhost + 127.0.0.1 on your Mac prior to debugging
+
+## Contributors
+
+- Stuart Wenham
+- Anna Bruce
+- Alison Lennon
+- Gau Wei Hum
+- Zhongtian Li
+- Yang Li
+- Quanzhou Yu
+
+Conversion to open source with thanks from Bram Hoex (UNSW), Richard Corkish (ACAP) and Ben Sudbury (PV Lighthouse)
+
 
 
