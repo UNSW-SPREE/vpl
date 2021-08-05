@@ -6,18 +6,21 @@
 		"dockerfile": "Dockerfile",
 		"args": {
 			// Update the VARIANT arg to pick a Java version: 11, 16
-			"VARIANT": "11",
+			"VARIANT": "16",
 			// Options
-			"INSTALL_MAVEN": "false",
+			"INSTALL_MAVEN": "true",
 			"INSTALL_GRADLE": "false",
 			"INSTALL_NODE": "false",
 			"NODE_VERSION": "lts/*"
 		}
 	},
-
+	"runArgs": [ //     "--net", "host", 
+        "-e", "DISPLAY=host.docker.internal:0",
+	],
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
-		"java.home": "/docker-java-home"
+		"java.home": "/docker-java-home",
+		"maven.executable.path": "/usr/local/sdkman/candidates/maven/current/bin/mvn"
 	},
 	
 	// Add the IDs of extensions you want installed when the container is created.
