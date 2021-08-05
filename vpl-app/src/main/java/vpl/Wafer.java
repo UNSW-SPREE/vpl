@@ -347,6 +347,7 @@ class Wafer implements Serializable{
     private double SL1;
     //pc1d foler
     private String pc1dFolder;
+    private String pc1dExe;
 
     // vectors for storing test results
     public Vector testNames;
@@ -442,8 +443,8 @@ class Wafer implements Serializable{
         
         //  try {
            
-            // pc1dFolder = WinRegistry.readString(WinRegistry.HKEY_CURRENT_USER, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders", "Common AppData");
-        pc1dFolder = "/pc1d"; //This is the path inside the resources folder but unlikely it will work
+        pc1dFolder = "pc1d";
+        pc1dExe = "/usr/bin/wine " + pc1dFolder + System.getProperty("file.separator") + "Pc1d.exe"; //This is the path inside the resources folder but unlikely it will work
         // } catch (IllegalArgumentException ex) {
         //     Logger.getLogger(Wafer.class.getName()).log(Level.SEVERE, null, ex);
         // } catch (IllegalAccessException ex) {
@@ -783,10 +784,7 @@ class Wafer implements Serializable{
         if (graphName != "Doping Profile" && graphName != "Pseudo IV Curve"){
             graphtype = " -gt 2";
             //commandString = System.getProperty("user.dir")
-            commandString =  pc1dFolder
-                                + System.getProperty("file.separator") + "VirtualProductionLine"
-                                + System.getProperty("file.separator") + "pc1d"
-                                + System.getProperty("file.separator") + "pc1d "
+            commandString =  pc1dExe
                                 + graphtype
                                 + bigString;
             runG(commandString);
@@ -855,9 +853,7 @@ class Wafer implements Serializable{
             
             //String reflect_filename = System.getProperty("user.dir")
             String reflect_filename = pc1dFolder
-                    + System.getProperty("file.separator") + "VirtualProductionLine"
-            + System.getProperty("file.separator") + "pc1d"
-            + System.getProperty("file.separator") + "reflect.dat";
+                + System.getProperty("file.separator") + "reflect.dat";
             File reflectionFile = new File(reflect_filename);
             double newRef=0.0;
             try {
@@ -892,10 +888,7 @@ class Wafer implements Serializable{
         }
 
         //commandString = System.getProperty("user.dir")
-        commandString = pc1dFolder
-                            + System.getProperty("file.separator") + "VirtualProductionLine"
-                            + System.getProperty("file.separator") + "pc1d"
-                            + System.getProperty("file.separator") + "pc1d"
+        commandString = pc1dExe
                             + graphtype
                             + bigString;
 
@@ -922,9 +915,7 @@ class Wafer implements Serializable{
         try {
             //run pc1dRuntime.getRuntime().exec
             Process p = Runtime.getRuntime().exec(commandString,null,
-                    new File(pc1dFolder
-                    + System.getProperty("file.separator") + "VirtualProductionLine"
-                            + System.getProperty("file.separator") + "pc1d"));
+                    new File(pc1dExe));
             p.waitFor();
         } catch (IOException e) {
             System.out.println( "An IO exception occurred while executing the cmd <" + commandString + ">:" + e.getMessage() );
@@ -952,10 +943,7 @@ class Wafer implements Serializable{
 
 
         //String filename = System.getProperty("user.dir")+ System.getProperty("file.separator") + "pc1d.dat";
-        String filename = pc1dFolder
-                + System.getProperty("file.separator") + "VirtualProductionLine"
-                + System.getProperty("file.separator") + "pc1d"
-                + System.getProperty("file.separator") + "pc1d.dat";
+        String filename = pc1dFolder + System.getProperty("file.separator") + "pc1d.dat";
         double x = 0;
         double y = 0;
         try {
@@ -1063,10 +1051,7 @@ class Wafer implements Serializable{
         //String filename = "pc1d.dat";
         //String filename = System.getProperty("user.dir")
         //+ System.getProperty("file.separator") + "pc1d"
-        String filename = pc1dFolder
-                + System.getProperty("file.separator") + "VirtualProductionLine"
-                + System.getProperty("file.separator") + "pc1d"
-                + System.getProperty("file.separator") + "pc1d.dat";
+        String filename = pc1dFolder + System.getProperty("file.separator") + "pc1d.dat";
         double x = 0;
         double y = 0;
         double z = 0;
@@ -1195,10 +1180,7 @@ class Wafer implements Serializable{
         
         //String filename = System.getProperty("user.dir")
         //+ System.getProperty("file.separator") + "pc1d"
-        String filename = pc1dFolder
-                + System.getProperty("file.separator") + "VirtualProductionLine"
-                + System.getProperty("file.separator") + "pc1d"
-                + System.getProperty("file.separator") + "pc1d.dat";
+        String filename = pc1dFolder + System.getProperty("file.separator") + "pc1d.dat";
 
         double x = 0;
         double y = 0;
@@ -1364,10 +1346,7 @@ class Wafer implements Serializable{
  	       //String filename = "pc1d.dat";
         //String filename = System.getProperty("user.dir")
         //+ System.getProperty("file.separator") + "pc1d"
-        String filename = pc1dFolder
-                + System.getProperty("file.separator") + "VirtualProductionLine"
-                + System.getProperty("file.separator") + "pc1d"
-                + System.getProperty("file.separator") + "pc1d.dat";
+        String filename = pc1dFolder + System.getProperty("file.separator") + "pc1d.dat";
         //String filename = System.getProperty("user.home") + System.getProperty("file.separator") + "pc1d.dat";
         double x = 0;
         double y = 0;
@@ -2220,10 +2199,7 @@ class Wafer implements Serializable{
         String jd1 = " -jd1 " + JD1;
         String ri = " -fei_i " + RI;
         //String commandString = System.getProperty("user.dir")
-        String commandString = pc1dFolder
-                            + System.getProperty("file.separator") + "VirtualProductionLine"
-                            + System.getProperty("file.separator") + "pc1d"
-                            + System.getProperty("file.separator") + "pc1d"
+        String commandString = pc1dExe
                             + graphtype
                             +bd+pd1+jd1+ri;
 
@@ -2231,9 +2207,7 @@ class Wafer implements Serializable{
             //run pc1d
             Process p = Runtime.getRuntime().exec(commandString,
                     null,
-                    new File(pc1dFolder
-                    + System.getProperty("file.separator") + "VirtualProductionLine"
-                            + System.getProperty("file.separator") + "pc1d"));
+                    new File(pc1dExe));
             p.waitFor();
         } catch (IOException e) {
             System.out.println( "An IO exception occurred while executing the cmd <" + commandString + ">:" + e.getMessage() );
@@ -2243,10 +2217,7 @@ class Wafer implements Serializable{
         }
 
         //String filename = System.getProperty("user.dir")+ System.getProperty("file.separator") + "pc1d.dat";
-        String filename = pc1dFolder
-                + System.getProperty("file.separator") + "VirtualProductionLine"
-                + System.getProperty("file.separator") + "pc1d"
-                + System.getProperty("file.separator") + "pc1d.dat";
+        String filename = pc1dFolder + System.getProperty("file.separator") + "pc1d.dat";
 
         try{
 	    FileInputStream in = new FileInputStream(filename);
@@ -2289,10 +2260,7 @@ class Wafer implements Serializable{
         String pd2 = " -pd2 " + PD2;
 	String ri = " -fei_i " + RI;
         //String commandString = System.getProperty("user.dir")
-        String commandString = pc1dFolder
-                            + System.getProperty("file.separator") + "VirtualProductionLine"
-                            + System.getProperty("file.separator") + "pc1d"
-                            + System.getProperty("file.separator") + "pc1d "
+        String commandString = pc1dExe
                             + graphtype
                             +a+bbr+it+rs+re+rb+rsh+sd+t1+bd+fsrv+t2+pd1+jd1+br+jd2+pd2+ri;
         try {
@@ -2307,9 +2275,7 @@ class Wafer implements Serializable{
         }
 
         //String filename = System.getProperty("user.dir") + System.getProperty("file.separator") + "pc1d.dat";
-        String filename = pc1dFolder
-                + System.getProperty("file.separator") + "VirtualProductionLine"
-                + System.getProperty("file.separator") + "pc1d.dat";
+        String filename = pc1dFolder + System.getProperty("file.separator") + "pc1d.dat";
         try{
 	    FileInputStream in = new FileInputStream(filename);
             int c;

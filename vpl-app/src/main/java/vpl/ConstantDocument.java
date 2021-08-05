@@ -7,6 +7,7 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import java.io.File;
+import java.io.InputStream;
 import java.net.URI;
 import java.net.URL;
 
@@ -17,13 +18,13 @@ import java.net.URL;
 public class ConstantDocument {
     // String filePath;
     Document document;
-    public ConstantDocument(URL url){
+    public ConstantDocument(InputStream inputStream){
         // filePath = path;
         try{
-            File fXmlFile = new File(url.toURI());
+            
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            document = dBuilder.parse(fXmlFile);
+            document = dBuilder.parse(inputStream);
             document.getDocumentElement().normalize();
         }catch(Exception e){ 
             e.printStackTrace();

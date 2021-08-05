@@ -337,10 +337,10 @@ public class VirtualProductionLine extends javax.swing.JFrame
         picturePanel.setBorder(BorderFactory.createBevelBorder(0));
         picturePane = new JScrollPane();
         picturePane.setBorder(BorderFactory.createBevelBorder(1));
-        // String picString = "images" + System.getProperty("file.separator") + "VPL4_Intro.jpg";
-        // coolpic = new PicPanel(classLoader.getResource(picString));
-        // coolpic.validate();
-        // picturePane.getViewport().add(coolpic);
+        // String picString = "images/VPL4_Intro.jpg";
+        coolpic = new PicPanel(classLoader.getResource("images/VPL4_Intro.jpg"));
+        coolpic.validate();
+        picturePane.getViewport().add(coolpic);
         Dimension picturePaneSize = new Dimension(300,230);
 	picturePane.setPreferredSize(picturePaneSize);
         picturePane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
@@ -1752,7 +1752,7 @@ public class VirtualProductionLine extends javax.swing.JFrame
 //        this.helpMenu.setEnabled(false);
         Dimension d = vplToolBar.getSize();
         toolBarPanel.remove(vplToolBar);
-        String filename = "images" + System.getProperty("file.separator") + "processing1.jpg";
+        String filename = "images/processing1.jpg";
         ProcessingPicPanel myPic = new ProcessingPicPanel(directoryPrefix + filename, d);
         myPic.validate();
         toolBarPanel.add(myPic);
@@ -2237,68 +2237,68 @@ public class VirtualProductionLine extends javax.swing.JFrame
 	        case 0:
 	        	 fn = classLoader.getResource("images/VPL4_Intro.jpg").toString(); break;
 	        case 1:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "epic.JPG"; break;
+	        	fn = directoryPrefix + "images/epic.JPG"; break;
 	        case 2:
-	        	 fn = directoryPrefix + "images" + System.getProperty("file.separator") + "rpic.JPG"; break;
+	        	 fn = directoryPrefix + "images/rpic.JPG"; break;
 	        case 3:
-	        	 fn = directoryPrefix + "images" + System.getProperty("file.separator") + "tpic.JPG"; break;
+	        	 fn = directoryPrefix + "images/tpic.JPG"; break;
 	        case 4:
-	        	 fn = directoryPrefix + "images" + System.getProperty("file.separator") + "racpic.JPG"; break;
+	        	 fn = directoryPrefix + "images/racpic.JPG"; break;
 	        case 5:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "dpic.JPG"; break;
+	        	fn = directoryPrefix + "images/dpic.JPG"; break;
 	        case 6:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "alspic.JPG"; break;
+	        	fn = directoryPrefix + "images/alspic.JPG"; break;
 	        case 7:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "alppic.JPG"; break; 
+	        	fn = directoryPrefix + "images/alppic.JPG"; break; 
 	        case 8:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "alfpic.JPG"; break;
+	        	fn = directoryPrefix + "images/alfpic.JPG"; break;
 	        case 9:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "dorpic.JPG"; break;
+	        	fn = directoryPrefix + "images/dorpic.JPG"; break;
 	        case 10:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "pepic.JPG"; break;
+	        	fn = directoryPrefix + "images/pepic.JPG"; break;
 	        case 11:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "arcpic.JPG"; break;
+	        	fn = directoryPrefix + "images/arcpic.JPG"; break;
 	        case 12:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "arcpic.JPG"; break;
+	        	fn = directoryPrefix + "images/arcpic.JPG"; break;
 	        case 13:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "ssspic.JPG"; break;
+	        	fn = directoryPrefix + "images/ssspic.JPG"; break;
 	        case 14:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "ssppic.JPG"; break;
+	        	fn = directoryPrefix + "images/ssppic.JPG"; break;
 	        case 15:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "ssfpic.JPG"; break;
+	        	fn = directoryPrefix + "images/ssfpic.JPG"; break;
 	        case 16:
 	        	fn = classLoader.getResource("images/VPL4_Intro.jpg").toString(); break;
 
                  // add image on acid texture BobH
 
                 case 21:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "atpic.jpg"; break;
+	        	fn = directoryPrefix + "images/atpic.jpg"; break;
 
                 case 22:
-                        fn = directoryPrefix + "images" + System.getProperty("file.separator") + "racpic.jpg"; break;
+                        fn = directoryPrefix + "images/racpic.jpg"; break;
 
                 case 23:
-                        fn = directoryPrefix + "images" + System.getProperty("file.separator") + "racpic.jpg"; break;
+                        fn = directoryPrefix + "images/racpic.jpg"; break;
                  // add end Bobh
 
                 case 26:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "dorpic.JPG"; break;
+	        	fn = directoryPrefix + "images/dorpic.JPG"; break;
 	        case 27:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "pepic.JPG"; break;
+	        	fn = directoryPrefix + "images/pepic.JPG"; break;
 	        case 28:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "arcpic.JPG"; break;
+	        	fn = directoryPrefix + "images/arcpic.JPG"; break;
 	        case 29:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "arcpic.JPG"; break;
+	        	fn = directoryPrefix + "images/arcpic.JPG"; break;
 	        case 30:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "ssspic.JPG"; break;
+	        	fn = directoryPrefix + "images/ssspic.JPG"; break;
 	        case 31:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "ssppic.JPG"; break;
+	        	fn = directoryPrefix + "images/ssppic.JPG"; break;
 	        case 32:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "alspic.JPG"; break;
+	        	fn = directoryPrefix + "images/alspic.JPG"; break;
 	        case 33:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "alppic.JPG"; break;
+	        	fn = directoryPrefix + "images/alppic.JPG"; break;
 	        case 34:
-	        	fn = directoryPrefix + "images" + System.getProperty("file.separator") + "cofpic.jpg"; break;
+	        	fn = directoryPrefix + "images/cofpic.jpg"; break;
 	        }
 	        PicPanel myPic = new PicPanel(classLoader.getResource(fn));
 	        myPic.validate();

@@ -21,7 +21,7 @@ public class Constant {
             String filename = "config.dat";
             // try {
                 
-                document = new ConstantDocument(Constant.class.getClassLoader().getResource(filename));
+                document = new ConstantDocument(Constant.class.getClassLoader().getResourceAsStream(filename));
             // } catch (MalformedURLException ex) {
             //     Logger.getLogger(Constant.class.getName()).log(Level.SEVERE, null, ex);
             // }
