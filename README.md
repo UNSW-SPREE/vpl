@@ -34,7 +34,7 @@ NOTE: the Virtual Production Line currently depends upon an old 16 bit x86 versi
 
 ## Building
 
-### on a windows machine
+### Locally 
 ---
 
 1. Install Java 16 SDK
