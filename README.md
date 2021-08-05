@@ -29,7 +29,7 @@ If you build the application acording to the instructions below, you will find t
 
 The vpl can be run by extracting this zip file to a folder and running vpl.bat inside the extracted folder.
 
-NOTE: the Virtual Production Line currently depends upon an old 16 bit x86 version of PC1D. Modern versions of Windows come in a variety of flavours and 64 bit windows does not natively support 16 bit applications. There are workarounds for these issues but they are beyond the sope of this readme.
+NOTE: the Virtual Production Line currently depends upon an old 16 bit x86 version of PC1D. Modern versions of Windows come in a variety of flavours and 64 bit windows does not natively support 16 bit applications. There are workarounds for these issues but they are beyond the scope of this readme.
 
 
 ## Building
