@@ -4,7 +4,7 @@ Simulated production line for screen printed solar cells, Originally Published: 
 
 Released as open source 2021.
 
-This application was written almost 20 years ago and while best efforts have been made to get a working version some things inevitably won't work. For example, while the help html files are in this repository and are bundled with the application, they do not work due to dependencies on technologies that can't be made open source or are simply no longer available.
+This application was written almost 20 years ago and while best efforts have been made to get a working version some things inevitably won't work. For example, while the help html files are in this repository and are bundled with the application, they do not work due to dependencies on technologies that can't be made open source or are simply no longer available. (The original source code and build are preserved in a [branch in this repo](https://github.com/UNSW-SPREE/vpl/tree/legacy-build))
 
 The instructions below are enough to build and run the application, so if you want to make some upgrades to the parts of the application that are no longer working, your contribuitions would be welcome. Just clone this repository, make your changes and make a pull request to request your changes to be integrated back into the main project for the benefit of all users of the Virtual Production Line.
 
