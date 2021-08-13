@@ -2237,35 +2237,35 @@ public class VirtualProductionLine extends javax.swing.JFrame
 	        case 0:
 	        	 fn = directoryPrefix + "images/VPL4_Intro.jpg"; break;
 	        case 1:
-	        	fn = directoryPrefix + "images/epic.JPG"; break;
+	        	fn = directoryPrefix + "images/epic.jpg"; break;
 	        case 2:
-	        	 fn = directoryPrefix + "images/rpic.JPG"; break;
+	        	 fn = directoryPrefix + "images/rpic.jpg"; break;
 	        case 3:
-	        	 fn = directoryPrefix + "images/tpic.JPG"; break;
+	        	 fn = directoryPrefix + "images/tpic.jpg"; break;
 	        case 4:
-	        	 fn = directoryPrefix + "images/racpic.JPG"; break;
+	        	 fn = directoryPrefix + "images/racpic.jpg"; break;
 	        case 5:
-	        	fn = directoryPrefix + "images/dpic.JPG"; break;
+	        	fn = directoryPrefix + "images/dpic.jpg"; break;
 	        case 6:
-	        	fn = directoryPrefix + "images/alspic.JPG"; break;
+	        	fn = directoryPrefix + "images/alspic.jpg"; break;
 	        case 7:
-	        	fn = directoryPrefix + "images/alppic.JPG"; break; 
+	        	fn = directoryPrefix + "images/alppic.jpg"; break; 
 	        case 8:
-	        	fn = directoryPrefix + "images/alfpic.JPG"; break;
+	        	fn = directoryPrefix + "images/alfpic.jpg"; break;
 	        case 9:
-	        	fn = directoryPrefix + "images/dorpic.JPG"; break;
+	        	fn = directoryPrefix + "images/dorpic.jpg"; break;
 	        case 10:
-	        	fn = directoryPrefix + "images/pepic.JPG"; break;
+	        	fn = directoryPrefix + "images/pepic.jpg"; break;
 	        case 11:
-	        	fn = directoryPrefix + "images/arcpic.JPG"; break;
+	        	fn = directoryPrefix + "images/arcpic.jpg"; break;
 	        case 12:
-	        	fn = directoryPrefix + "images/arcpic.JPG"; break;
+	        	fn = directoryPrefix + "images/arcpic.jpg"; break;
 	        case 13:
-	        	fn = directoryPrefix + "images/ssspic.JPG"; break;
+	        	fn = directoryPrefix + "images/ssspic.jpg"; break;
 	        case 14:
-	        	fn = directoryPrefix + "images/ssppic.JPG"; break;
+	        	fn = directoryPrefix + "images/ssppic.jpg"; break;
 	        case 15:
-	        	fn = directoryPrefix + "images/ssfpic.JPG"; break;
+	        	fn = directoryPrefix + "images/ssfpic.jpg"; break;
 	        case 16:
 	        	fn = directoryPrefix + "images/VPL4_Intro.jpg"; break;
 
@@ -2282,21 +2282,21 @@ public class VirtualProductionLine extends javax.swing.JFrame
                  // add end Bobh
 
                 case 26:
-	        	fn = directoryPrefix + "images/dorpic.JPG"; break;
+	        	fn = directoryPrefix + "images/dorpic.jpg"; break;
 	        case 27:
-	        	fn = directoryPrefix + "images/pepic.JPG"; break;
+	        	fn = directoryPrefix + "images/pepic.jpg"; break;
 	        case 28:
-	        	fn = directoryPrefix + "images/arcpic.JPG"; break;
+	        	fn = directoryPrefix + "images/arcpic.jpg"; break;
 	        case 29:
-	        	fn = directoryPrefix + "images/arcpic.JPG"; break;
+	        	fn = directoryPrefix + "images/arcpic.jpg"; break;
 	        case 30:
-	        	fn = directoryPrefix + "images/ssspic.JPG"; break;
+	        	fn = directoryPrefix + "images/ssspic.jpg"; break;
 	        case 31:
-	        	fn = directoryPrefix + "images/ssppic.JPG"; break;
+	        	fn = directoryPrefix + "images/ssppic.jpg"; break;
 	        case 32:
-	        	fn = directoryPrefix + "images/alspic.JPG"; break;
+	        	fn = directoryPrefix + "images/alspic.jpg"; break;
 	        case 33:
-	        	fn = directoryPrefix + "images/alppic.JPG"; break;
+	        	fn = directoryPrefix + "images/alppic.jpg"; break;
 	        case 34:
 	        	fn = directoryPrefix + "images/cofpic.jpg"; break;
 	        }
